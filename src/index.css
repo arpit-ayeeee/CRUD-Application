@@ -1,5 +1,19 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.not-found{
+     position: fixed;
+     width: 100vw;
+     height: 100vh;
+     background-color:white;
+     top:0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card{
+     height: 350px;
+     margin-bottom: 15px;
+     overflow: scroll;
+}
+.card-header{
+     height: 80px;
+     color: white;
 }
