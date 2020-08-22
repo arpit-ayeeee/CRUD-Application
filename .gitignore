@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-
+/crud-server-heroku
 # testing
 /coverage
 

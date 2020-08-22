@@ -10,12 +10,12 @@ const User = () => {
     },[]);       //[] is for the dependency, which defines how many time function will execute 
     
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3001/users");        //axios calls fake api, JS executes code line by line, so await keyword wait for the code after it to get executed and then only shift to execute next line
+        const result = await axios.get("https://crud-server-heroku.herokuapp.com/users");        //axios calls fake api, JS executes code line by line, so await keyword wait for the code after it to get executed and then only shift to execute next line
         setUser(result.data.reverse()); 
     }
 
     const deleteUser = async userId => {
-        await axios.delete(`http://localhost:3001/users/${userId}`);
+        await axios.delete(`https://crud-server-heroku.herokuapp.com/users/${userId}`);
         loadUsers(); //So that page gets refreshed
     }
     const us = users.filter((user) => user.name ? true : null);

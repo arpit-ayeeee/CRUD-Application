@@ -9,12 +9,12 @@ const Display = () => {
     },[]);
 
     const loadPosts = async () => {
-        const res = await axios.get("http://localhost:3001/users");
+        const res = await axios.get("https://crud-server-heroku.herokuapp.com/users");
         setUser(res.data.reverse()); 
     }
 
     const deleteUser = async id => {
-        await axios.delete(`http://localhost:3001/users/${id}`);
+        await axios.delete(`https://crud-server-heroku.herokuapp.com/users/${id}`);
         loadPosts(); //So that page gets refreshed
     }
 

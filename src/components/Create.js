@@ -18,7 +18,7 @@ const CreatePost = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:3001/users", user);      //Used ot post the data on server
+    await axios.post("https://crud-server-heroku.herokuapp.com/users", user);      //Used ot post the data on server
     history.push("/");      //This redirect us to homepage, after posting the data
   };
   return (

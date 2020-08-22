@@ -22,12 +22,12 @@ const Edit = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:3001/users/${id}`, user);
+    await axios.put(`https://crud-server-heroku.herokuapp.com/users/${id}`, user);
     history.push("/");  
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:3001/users/${id}`);
+    const result = await axios.get(`https://crud-server-heroku.herokuapp.com/users/${id}`);
     setUser(result.data);
   };
   return (
