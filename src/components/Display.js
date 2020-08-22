@@ -17,7 +17,6 @@ const Display = () => {
         await axios.delete(`https://crud-server-heroku.herokuapp.com/users/${id}`);
         loadPosts(); //So that page gets refreshed
     }
-
     return(
         <div className="container mt-5">
             <button className="btn-primary btn-lg shadow mb-3 border"><em>Feeds</em></button>
@@ -34,8 +33,10 @@ const Display = () => {
                                     <p className="card-text">{user.body}</p>
                                 </div>
                                 <div className="card-footer bg-white">
-                                    <Link to={`/edit/${user.id}`} className="btn btn-success btn-sm mr-2">Edit post</Link>
-                                    <Link className="btn btn-danger btn-sm" onClick={() => deleteUser(user.id)}>Delete post</Link>
+                                    <Link to={`/edit/${user.id}`} className="btn btn-success btn-sm mr-1">Edit post</Link>
+                                    <Link className="btn btn-danger btn-sm mr-1" onClick={() => deleteUser(user.id)}>Delete post</Link>
+                                    <Link className="btn btn-primary btn-sm mr-1">Like</Link>
+                                    <Link className="btn btn-secondary btn-sm">Dislike</Link>
                                 </div>
                             </div>
                         </div>
